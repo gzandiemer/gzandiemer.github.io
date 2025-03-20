@@ -24,7 +24,7 @@
 		@if ($category == brands) {
 			font-family: 'Font Awesome 5 Brands';
 		}
-		@elseif ($category == solid) {
+		@else if ($category == solid) {
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 900;
 		}
@@ -57,6 +57,7 @@
 	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max($x, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
 
 }
+
 
 /// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).
 /// @param {string} $svg SVG data URL.

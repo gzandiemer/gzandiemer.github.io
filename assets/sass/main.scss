@@ -1,10 +1,53 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/vendor';
-@import 'libs/breakpoints';
-@import 'libs/html-grid';
-@import 'fontawesome-all.min.css';
+@use 'libs/vars' as *;
+@use 'libs/functions' as *;
+@use 'libs/mixins' as *;
+@use 'libs/breakpoints' as *;
+@use 'libs/vendor' as *;
+@use 'libs/html-grid' as *;
+//@use 'fontawesome-all.min.css';
+
+@forward 'libs/vars';
+@forward 'libs/functions';
+@forward 'libs/mixins';
+@forward 'libs/breakpoints';
+@forward 'libs/vendor';
+@forward 'libs/html-grid';
+
+
+// Base.
+
+@use 'base/reset';
+@use 'base/page';
+@use 'base/typography';
+
+// Component.
+
+@use 'components/row';
+@use 'components/section';
+@use 'components/form';
+@use 'components/box';
+@use 'components/icon';
+@use 'components/image';
+@use 'components/list';
+@use 'components/actions';
+@use 'components/icons';
+@use 'components/pagination';
+@use 'components/table';
+@use 'components/button';
+@use 'components/tiles';
+@use 'components/contact-method';
+@use 'components/spotlights';
+
+// Layout.
+
+@use 'layout/header';
+@use 'layout/banner';
+@use 'layout/main';
+@use 'layout/contact';
+@use 'layout/footer';
+@use 'layout/wrapper';
+@use 'layout/menu';
+
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic');
 
 /*
@@ -40,36 +83,3 @@
 		}
 	}
 
-// Base.
-
-	@import 'base/reset';
-	@import 'base/page';
-	@import 'base/typography';
-
-// Component.
-
-	@import 'components/row';
-	@import 'components/section';
-	@import 'components/form';
-	@import 'components/box';
-	@import 'components/icon';
-	@import 'components/image';
-	@import 'components/list';
-	@import 'components/actions';
-	@import 'components/icons';
-	@import 'components/pagination';
-	@import 'components/table';
-	@import 'components/button';
-	@import 'components/tiles';
-	@import 'components/contact-method';
-	@import 'components/spotlights';
-
-// Layout.
-
-	@import 'layout/header';
-	@import 'layout/banner';
-	@import 'layout/main';
-	@import 'layout/contact';
-	@import 'layout/footer';
-	@import 'layout/wrapper';
-	@import 'layout/menu';
